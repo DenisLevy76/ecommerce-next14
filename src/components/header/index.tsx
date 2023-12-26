@@ -1,11 +1,14 @@
 import { Bell, Heart, Search, ShoppingBasket } from 'lucide-react'
 import Image from 'next/image'
 import { IconButton } from '../ui/button-icon'
+import Link from 'next/link'
 
 export const Header: React.FC = () => {
   return (
     <header className="flex justify-between items-center">
-      <h3 className="font-extrabold text-3xl">Store</h3>
+      <Link href="/">
+        <h3 className="font-extrabold text-3xl">Store</h3>
+      </Link>
       <form className="flex gap-2 bg-zinc-900 rounded-md px-4 py-2">
         <input
           type="text"

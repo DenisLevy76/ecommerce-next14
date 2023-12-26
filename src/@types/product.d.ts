@@ -1,8 +1,9 @@
-export interface HighlightedProductCardProps {
+export interface Product {
+  id: string
   coverImage: string
   title: string
   value: number
   slug: string
   alt?: string
-  className?: string
+  images: string[]
 }
