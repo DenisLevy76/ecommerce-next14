@@ -3,6 +3,12 @@ import { Card, CardContent, CardHeader, CardTitle } from '../ui/card'
 import { formatCurrency } from '@/lib/utils'
 import { ProductCardProps } from './types'
 import Link from 'next/link'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '../ui/tooltip'
 
 export const ProductCard: React.FC<ProductCardProps> = ({
   coverImage,
@@ -13,7 +19,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 }) => {
   return (
     <Link href={`/product/${slug}`}>
-      <Card className="flex flex-col gap-3 p-0 overflow-hidden">
+      <Card className="flex flex-col gap-3 p-0 overflow-hidden scale-95 hover:scale-100 transition-transform">
         <CardHeader className="p-0 overflow-hidden w-full h-64">
           <Image
             src={coverImage}
@@ -24,7 +30,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           />
         </CardHeader>
         <CardContent className="flex flex-col gap-2">
-          <CardTitle className="leading-normal card-title h-[72px]">
+          <CardTitle
+            className="leading-normal card-title h-[72px]"
+            title={title}
+          >
             {title}
           </CardTitle>
           <strong className="text-lg">{formatCurrency(price)}</strong>

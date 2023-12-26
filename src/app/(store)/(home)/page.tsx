@@ -63,7 +63,7 @@ export default function Home() {
             {PRODUCTS.map((product) => (
               <CarouselItem
                 key={product.id}
-                className="pl-4 md:basis-1/4 lg:basis-1/4"
+                className="pl-2 md:basis-1/4 lg:basis-1/4"
               >
                 <ProductCard
                   coverImage={product.coverImage}
