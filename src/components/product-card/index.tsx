@@ -3,12 +3,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '../ui/card'
 import { formatCurrency } from '@/lib/utils'
 import { ProductCardProps } from './types'
 import Link from 'next/link'
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from '../ui/tooltip'
 
 export const ProductCard: React.FC<ProductCardProps> = ({
   coverImage,
@@ -36,6 +30,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           >
             {title}
           </CardTitle>
+
           <strong className="text-lg">{formatCurrency(price)}</strong>
           <p className="text-sm text-muted-foreground">
             em até 12x de <strong>{formatCurrency(price / 12)}</strong> sem
