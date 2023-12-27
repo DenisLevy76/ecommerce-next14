@@ -1,6 +1,8 @@
 import { HighlightedProductCard } from '@/components/highlighted-product-card'
 import { ProductCardProps } from '@/components/product-card/types'
 import { ProductsCarousel } from '@/components/products-carousel'
+import Image from 'next/image'
+import Link from 'next/link'
 
 const PRODUCTS: ProductCardProps[] = [
   {
@@ -74,6 +76,18 @@ const PRODUCTS: ProductCardProps[] = [
 export default function Home() {
   return (
     <main className="flex flex-col gap-8">
+      <section>
+        <Link href="/">
+          <Image
+            src="https://source.unsplash.com/random/1231312351"
+            alt="banner"
+            width={1440}
+            height={400}
+            quality={100}
+            className="w-full h-[20rem] object-cover rounded-md"
+          />
+        </Link>
+      </section>
       <section id="highlighted-products" className="flex flex-col">
         <h2 className="font-semibold text-2xl mb-4">Produtos em destaque</h2>
         <div className="grid grid-cols-6 grid-rows-4 max-h-[750px] gap-4">

@@ -21,6 +21,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             className="w-full h-full object-cover"
             width={300}
             height={200}
+            quality={100}
           />
         </CardHeader>
         <CardContent className="flex flex-col gap-2">

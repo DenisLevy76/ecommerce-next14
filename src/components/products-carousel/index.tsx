@@ -22,7 +22,7 @@ export const ProductsCarousel: React.FC<ProductsCarouselProps> = ({
         {products.map((product) => (
           <CarouselItem
             key={product.slug}
-            className="basis-1/2 md:basis-1/3 lg:basis-1/4"
+            className="md:basis-1/3 lg:basis-1/4"
           >
             <ProductCard
               coverImage={product.coverImage}
