@@ -1,4 +1,7 @@
 import { ImagesCarousel } from '@/components/images-carousel'
+import { Button } from '@/components/ui/button'
+import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group'
+import { formatCurrency } from '@/lib/utils'
 
 const IMAGES_MOCK = [
   'https://cdn.vnda.com.br/780x/lolja/2023/12/22/09_10_19_380_9_12_2_202_03.png?v=1703247050',
@@ -13,8 +16,66 @@ const Product: React.FC = () => {
     <main className="flex flex-col gap-8">
       <section className="grid grid-cols-2">
         <ImagesCarousel images={IMAGES_MOCK} />
-        <div>
-          <h3 className="font-semibold text-3xl">Camisa Gamer Dark Souls 3</h3>
+        <div className="flex justify-center items-center">
+          <article>
+            <h3 className="font-semibold text-3xl">Moletom Carniçal</h3>
+            <p className="text-base text-muted-foreground">
+              Moletom fabricado com 88% de algodão e 12% de poliéster.
+            </p>
+            <p className="mt-8">
+              <span className="block mb-2 text-muted-foreground">
+                De: <span className="line-through">R$ 110,00</span>
+              </span>
+              <strong className="inline-block bg-secondary text-black text-xl font-semibold rounded-full p-3">
+                R$ 95,00
+              </strong>{' '}
+              em até 12x sem juros no cartão de R$ {formatCurrency(95 / 12)}
+            </p>
+
+            <div className="flex flex-col gap-3 items-baseline">
+              <label htmlFor="sizes" className="text-lg font-semibold mt-8">
+                Tamanhos
+              </label>
+              <ToggleGroup
+                type="single"
+                id="sizes"
+                variant={'outline'}
+                className="gap-3"
+              >
+                <ToggleGroupItem
+                  value="p"
+                  aria-label="Selecionar o tamanho P"
+                  className="w-12"
+                >
+                  P
+                </ToggleGroupItem>
+                <ToggleGroupItem
+                  value="m"
+                  aria-label="Selecionar o tamanho M"
+                  className="w-12"
+                >
+                  M
+                </ToggleGroupItem>
+                <ToggleGroupItem
+                  value="g"
+                  aria-label="Selecionar o tamanho G"
+                  className="w-12"
+                >
+                  G
+                </ToggleGroupItem>
+                <ToggleGroupItem
+                  value="gg"
+                  aria-label="Selecionar o tamanho GG"
+                  className="w-12"
+                >
+                  GG
+                </ToggleGroupItem>
+              </ToggleGroup>
+            </div>
+            <Button className="w-full h-14 text-lg font-semibold mt-8 bg-green-600 hover:bg-green-500">
+              Adicionar ao carrinho
+            </Button>
+          </article>
         </div>
       </section>
     </main>
