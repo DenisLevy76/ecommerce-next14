@@ -25,17 +25,15 @@ export const ImagesCarousel: React.FC<ImagesCarouselProps> = ({ images }) => {
         className="w-[600px] rounded-md object-cover pointer-events-none aspect-square"
       />
       <Carousel
-        className="w-auto"
+        className="w-auto flex gap-3 items-center justify-center"
         opts={{
           align: 'start',
         }}
       >
+        <CarouselPrevious variant="ghost" />
         <CarouselContent>
           {images.map((image) => (
-            <CarouselItem
-              key={image}
-              className="basis-1/2 md:basis-1/4 lg:basis-1/5"
-            >
+            <CarouselItem key={image} className="basis-1/4 lg:basis-1/5">
               <button onClick={() => setImageHighlighted(image)}>
                 <Image
                   src={image}
@@ -49,7 +47,6 @@ export const ImagesCarousel: React.FC<ImagesCarouselProps> = ({ images }) => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious variant="ghost" />
         <CarouselNext variant="ghost" />
       </Carousel>
     </div>

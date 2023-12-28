@@ -13,11 +13,12 @@ export const ProductsCarousel: React.FC<ProductsCarouselProps> = ({
 }) => {
   return (
     <Carousel
-      className="w-full"
+      className="w-full flex items-center gap-2"
       opts={{
         align: 'start',
       }}
     >
+      <CarouselPrevious variant="ghost" />
       <CarouselContent>
         {products.map((product) => (
           <CarouselItem
@@ -34,7 +35,6 @@ export const ProductsCarousel: React.FC<ProductsCarouselProps> = ({
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious variant="ghost" />
       <CarouselNext variant="ghost" />
     </Carousel>
   )

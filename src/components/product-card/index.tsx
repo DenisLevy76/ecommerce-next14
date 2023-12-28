@@ -26,7 +26,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
         </CardHeader>
         <CardContent className="flex flex-col gap-2">
           <CardTitle
-            className="leading-normal card-title h-[72px]"
+            className="leading-normal card-title h-[72px] text-base"
             title={title}
           >
             {title}

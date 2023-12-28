@@ -13,8 +13,8 @@ const IMAGES_MOCK = [
 
 const Product: React.FC = () => {
   return (
-    <main className="flex flex-col gap-8">
-      <section className="grid grid-cols-2">
+    <div className="flex flex-col gap-8">
+      <section className="flex flex-col gap-4 md:grid md:grid-cols-2 md:gap-x-14">
         <ImagesCarousel images={IMAGES_MOCK} />
         <div className="flex justify-center items-center">
           <article>
@@ -78,7 +78,7 @@ const Product: React.FC = () => {
           </article>
         </div>
       </section>
-    </main>
+    </div>
   )
 }
 export default Product
