@@ -14,11 +14,11 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   return (
     <Link href={`/product/${slug}`}>
       <Card className="flex flex-col gap-3 p-0 overflow-hidden scale-95 hover:scale-100 transition-transform">
-        <CardHeader className="p-0 overflow-hidden w-full h-64">
+        <CardHeader className="p-0 overflow-hidden w-full">
           <Image
             src={coverImage}
             alt={imageAlt || ''}
-            className="w-full h-full object-cover"
+            className="w-full  object-cover aspect-square"
             width={300}
             height={200}
             quality={100}
