@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '../ui/card'
 import { formatCurrency } from '@/lib/utils'
 import { ProductCardProps } from './types'
 import Link from 'next/link'
+import Balancer from 'react-wrap-balancer'
 
 export const ProductCard: React.FC<ProductCardProps> = ({
   coverImage,
@@ -29,7 +30,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             className="leading-normal card-title h-[72px] text-base"
             title={title}
           >
-            {title}
+            <Balancer>{title}</Balancer>
           </CardTitle>
 
           <strong className="text-lg">{formatCurrency(price)}</strong>

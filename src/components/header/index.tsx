@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { Bell, Heart, Search, ShoppingBasket } from 'lucide-react'
+import { Bell, Heart, ShoppingBasket } from 'lucide-react'
 import { IconButton } from '../ui/button-icon'
 import { Button } from '../ui/button'
 import { HamburgerMenuIcon } from '@radix-ui/react-icons'
