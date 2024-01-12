@@ -2,8 +2,8 @@ export interface Product {
   id: string
   coverImage: string
   title: string
-  value: number
+  price: number
   slug: string
-  alt?: string
+  imageAlt?: string
   images: string[]
 }

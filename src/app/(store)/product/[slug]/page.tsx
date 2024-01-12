@@ -26,10 +26,12 @@ const Product: React.FC = () => {
               <span className="block mb-2 text-muted-foreground">
                 De: <span className="line-through">R$ 110,00</span>
               </span>
-              <strong className="inline-block bg-secondary text-black text-xl font-semibold rounded-full p-3">
+              <strong className="inline-block bg-primary text-black text-xl font-semibold rounded-full p-3">
                 R$ 95,00
               </strong>{' '}
-              em até 12x sem juros no cartão de R$ {formatCurrency(95 / 12)}
+            </p>
+            <p className="mt-6">
+              Em até 12x sem juros no cartão de R$ {formatCurrency(95 / 12)}
             </p>
 
             <div className="flex flex-col gap-3 items-baseline">
@@ -72,7 +74,7 @@ const Product: React.FC = () => {
                 </ToggleGroupItem>
               </ToggleGroup>
             </div>
-            <Button className="w-full h-14 text-lg font-semibold mt-8 bg-green-600 hover:bg-green-500">
+            <Button className="w-full h-14 text-lg font-semibold mt-8 bg-green-700 hover:bg-green-600 text-white">
               Adicionar ao carrinho
             </Button>
           </article>
