@@ -6,7 +6,6 @@ import { IconButton } from '../ui/button-icon'
 import { Button } from '../ui/button'
 import { HamburgerMenuIcon } from '@radix-ui/react-icons'
 import { SearchForm } from '../search-form'
-import { Cart } from '../cart'
 import { CartMobile } from '../cart/cart-mobile'
 import { CartWeb } from '../cart/cart-web'
 
