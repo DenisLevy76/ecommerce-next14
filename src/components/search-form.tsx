@@ -35,7 +35,6 @@ export const SearchForm: React.FC = () => {
       />
       <IconButton
         type="submit"
-        variant="ghost"
         title="Realizar pesquisa"
         ariaLabel="Realizar pesquisa"
       >
