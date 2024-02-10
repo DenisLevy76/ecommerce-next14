@@ -3,7 +3,8 @@ export interface Product {
   coverImage: string
   title: string
   price: number
+  discount: number
   slug: string
   imageAlt?: string
-  images: string[]
+  images?: string[]
 }
